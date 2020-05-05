@@ -1,5 +1,6 @@
 package cm.amk.msscbeer.web.model;
 
+import lombok.Value;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 
