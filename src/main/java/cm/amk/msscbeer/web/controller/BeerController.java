@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.UUID;
 
 @RestController
@@ -13,19 +14,19 @@ public class BeerController {
 
     @GetMapping("/{beerId}")
     public ResponseEntity<?> getBeerById(@PathVariable UUID beerId) {
-        //TODO impl
+        //TODO implement
         return new ResponseEntity<>(BeerDto.builder().build(), HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<?> saveNewBeer(@RequestBody BeerDto beerDto) {
-        //TODO impl
+    public ResponseEntity<?> saveNewBeer(@Valid @RequestBody BeerDto beerDto) {
+        //TODO implement
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @PutMapping("/{beerId}")
-    public ResponseEntity<?> updateBeerById(@PathVariable UUID beerId) {
-        //TODO impl
+    public ResponseEntity<?> updateBeerById(@PathVariable UUID beerId, @Valid @RequestBody BeerDto beerDto) {
+        //TODO implement
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
