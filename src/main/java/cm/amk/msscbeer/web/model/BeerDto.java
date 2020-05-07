@@ -21,23 +21,28 @@ import java.util.UUID;
 public class BeerDto {
     @Null
     private UUID id;
+
     @Null
     private Integer version;
 
     @Null
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ")
     private OffsetDateTime createdDate;
+
     @Null
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ")
     private OffsetDateTime lastModifiedDate;
+
     @NotBlank
     private String beerName;
+
     @NotNull
     private BeerStyleEnum beerStyle;
 
-    @Positive
+
     @NotNull
-    private Long upc;
+    private String upc;
+
     @Positive
     @NotNull
     @JsonFormat(shape = JsonFormat.Shape.STRING)
