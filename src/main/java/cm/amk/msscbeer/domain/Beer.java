@@ -27,7 +27,7 @@ public class Beer {
 
     @CreationTimestamp
     @Column(updatable = false, nullable = false)
-    private Timestamp createDate;
+    private Timestamp createdDate;
     @UpdateTimestamp
     @Column(insertable = false)
     private Timestamp lastModifiedDate;
