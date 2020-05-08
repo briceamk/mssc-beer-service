@@ -76,7 +76,8 @@
         </dependency>
         <dependency>
             <groupId>javax.cache</groupId>
-            <artifactId>cahe-api</artifactId>
+            <artifactId>cache-api</artifactId>
+            <version>1.1.1</version>
         </dependency>
         <dependency>
             <groupId>org.ehcache</groupId>
