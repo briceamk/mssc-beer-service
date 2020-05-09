@@ -84,7 +84,6 @@ public class BeerServiceImpl implements BeerService {
     @Override
     @Cacheable(value = "upcCache", key = "#upc", condition = "#showInventoryOnHand == false")
     public BeerDto getBeerByUPC(String upc, Boolean showInventoryOnHand) {
-        log.info("*****************getBeerByUPC: I was called");
         Beer beer = beerRepository.findByUpc(upc).orElseThrow(NotFoundException::new);
         if(showInventoryOnHand) {
             return beerMapper.beerToBeerDtoWithInventory(beer);
